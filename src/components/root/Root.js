@@ -1,9 +1,11 @@
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
-const ROUTES = {
+
+export const ROUTES = {
   CONTACTS: "/contacts",
   APPOINTMENTS: "/appointments",
 };
+
 function Root() {
   return (
     <>
