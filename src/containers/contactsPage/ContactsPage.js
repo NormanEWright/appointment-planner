@@ -13,6 +13,9 @@ export const ContactsPage = ({ contacts, addContact}) => {
     e.preventDefault();
     if (!duplicate) {
       addContact(name, phone, email);
+      setName("");
+      setPhone("");
+      setEmail("");
     }
   };
 
