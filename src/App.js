@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   RouterProvider,
   createBrowserRouter,
@@ -11,15 +11,10 @@ import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
-  /*
-  Define state variables for 
-  contacts and appointments 
-  */
+  const [appointments, setAppointments] = useState([]);
+  const [contacts, setContacts] = useState([]);
 
-  /*
-  Implement functions to add data to
-  contacts and appointments
-  */
+  
 
   const router = createBrowserRouter(
     createRoutesFromElements(
