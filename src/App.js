@@ -23,8 +23,19 @@ function App() {
         date,
         time,
       }
-    ])
-  }
+    ]);
+  };
+
+  const addContact = (name, phone, email) => {
+    setContacts([
+      ...contacts,
+      {
+        name,
+        phone,
+        email,
+      },
+    ]);
+  };
 
   const router = createBrowserRouter(
     createRoutesFromElements(
