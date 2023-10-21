@@ -1,30 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
-import { TileList } from "../../components/tileList/TileList";
+const getTodayString = () => {
+  const [month, day, year] = new Date().toLocaleDateString("en-US").split("/");
+  return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+};
 
-export const AppointmentsPage = () => {
-  /*
-  Define state variables for 
-  appointment info
-  */
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    /*
-    Add contact info and clear data  
-    */
-  };
-
-  return (
-    <div>
-      <section>
-        <h2>Add Appointment</h2>
-      </section>
-      <hr />
-      <section>
-        <h2>Appointments</h2>
-      </section>
-    </div>
-  );
+export const AppointmentForm = ({
+  contacts,
+  title,
+  setTitle,
+  contact,
+  setContact,
+  date,
+  setDate,
+  time,
+  setTime,
+  handleSubmit,
+}) => {
+  return <></>;
 };
