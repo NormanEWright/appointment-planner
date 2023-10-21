@@ -4,15 +4,15 @@ import { AppointmentForm } from "../../components/appointmentForm/AppointmentFor
 import { TileList } from "../../components/tileList/TileList";
 
 export const AppointmentsPage = ({ appointments, contacts, addAppointment }) => {
-  const [name, setName] = useState("");
+  const [title, setTitle] = useState("");
   const [contact, setContact] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addAppointment(name, contact, date, time);
-    setName("");
+    addAppointment(title, contact, date, time);
+    setTitle("");
     setContact("");
     setDate("");
     setTime("");
@@ -22,14 +22,15 @@ export const AppointmentsPage = ({ appointments, contacts, addAppointment }) => 
     <div>
       <section>
         <h2>Add Appointment</h2>
-        <AppointmentForm 
-          name={name}
-          setName={setName}
+        <AppointmentForm
+          title={title}
+          setTitle={setTitle}
           contacts={contacts}
           setContact={setContact}
           date={date}
           setDate={setDate}
-          time={setTime}
+          time={time}
+          setTime={setTime}
           handleSubmit={handleSubmit}
         />
       </section>
